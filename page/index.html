@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World</title>
+  <style>
+    .container {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img
+      src="https://avatars.githubusercontent.com/u/95702252?s=300"
+      alt="Awesome Starter"
+    >
+    <h1></h1>
+  </div>
+
+  <script>
+    (async () => {
+      const res = await fetch('/api/helloWorld')
+      const json = await res.json()
+      document.querySelector('h1').innerText = json.data
+    })()
+  </script>
+</body>
+</html>

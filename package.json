@@ -1,0 +1,35 @@
+{
+  "name": "node-express-starter",
+  "version": "0.0.0",
+  "description": "A express template for Node.js project.",
+  "author": "chengpeiquan",
+  "main": "src/server.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "node src/server.js",
+    "start": "pm2 start src/server.js",
+    "stop": "pm2 stop src/server.js",
+    "restart": "npm run stop && npm run start",
+    "format": "prettier --write .",
+    "backup": "git add . && git commit -m \"chore: save the coding progress\" && git push"
+  },
+  "devDependencies": {
+    "connect-history-api-fallback": "^1.6.0",
+    "eslint": "^8.6.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "express": "^4.17.2",
+    "lint-staged": "^12.1.5",
+    "prettier": "^2.5.1"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged --concurrent false"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write .",
+      "eslint --fix"
+    ]
+  }
+}
