@@ -1,7 +1,7 @@
 {
   "name": "node-express-starter",
   "version": "0.0.0",
-  "description": "A express template for Node.js project.",
+  "description": "An express template for Node.js project.",
   "author": "chengpeiquan",
   "main": "src/server.js",
   "license": "MIT",
